@@ -11,14 +11,19 @@ namespace Bookstore
             using(var context = new Se407BookstoreContext())
             {
                 return context.Books
-                    .FirstOrDefault(b => b.BookTitle == title);
+                .Include(b => b.Author)
+                .Include(b => b.Genre)
+                .FirstOrDefault(b => b.BookTitle == title);
             }
         }
         public static List<Book> GetAllBooks()
         {
             using (var context = new Se407BookstoreContext())
             {
-                return context.Books.ToList();
+                return context.Books
+               .Include(b => b.Author)
+               .Include(b => b.Genre) 
+               .ToList();
             }
         }
         public static List<Book> GetBooksByAuthorLastName(string authorLastName)

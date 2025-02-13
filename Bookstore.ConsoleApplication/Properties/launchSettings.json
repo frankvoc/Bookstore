@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "Bookstore.ConsoleApplication": {
+      "commandName": "Project"
+    }
+  }
+}
