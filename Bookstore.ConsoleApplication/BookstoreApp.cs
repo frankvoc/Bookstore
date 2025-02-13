@@ -16,9 +16,9 @@ public class BookstoreApp
         {
             Console.WriteLine("Some functions");
             Console.WriteLine("Go to debugger window in ConsoleApp Properties");
-            Console.WriteLine("getbook Title (with quotes around title)");
+            Console.WriteLine("getbook TitleOfBook (with quotes around title)");
             Console.WriteLine("getallbooks");
-            Console.WriteLine("getbooksbyauthor LastName (with quotes around LastName");
+            Console.WriteLine("getbooksbyauthor LastNameOfAuthor (with quotes around LastName");
         }
         {
             string command = args[0].ToLower();
